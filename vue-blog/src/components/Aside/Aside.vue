@@ -1,6 +1,9 @@
 <template>
-  <transition>
     <div class='asideWrap'>
+        <div class="aside-search">
+            <input type="text">
+            <i @click='toggleAside' :class="['iconfont', {'iconzhankai': !asideShow}, {'iconshouqi': asideShow}]"></i>
+        </div>
         <el-menu background-color='#24252d'
                 text-color='#fff'
                 active-text-color='#535ba0'
@@ -13,11 +16,16 @@
             </menu-item>
         </el-menu>
     </div>
-  </transition>
 </template>
 <script>
 const menuItem = resolve => require(['@/components/Menu/MenuItem'], resolve)
 export default {
+    props: {
+        asideShow: {
+            type: Boolean,
+            default: true
+        }
+    },
     components: {
         menuItem
     },
@@ -38,6 +46,9 @@ export default {
         handleClose(key, keyPath) {
             // eslint-disable-next-line
             console.log(key, keyPath)
+        },
+        toggleAside () {
+            this.$emit('toggleAside')
         }
     }
 }

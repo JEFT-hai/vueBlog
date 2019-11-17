@@ -1,4 +1,5 @@
 import axios from 'axios'
+// import ajax from './ajax.js'
 
 let Config = {
     url: 'http://157.245.188.150:8080/'
