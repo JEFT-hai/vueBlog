@@ -28,7 +28,9 @@ export default {
 
 <style lang='less'>
     .pageHeader{
-        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100px;
         line-height: 100px;

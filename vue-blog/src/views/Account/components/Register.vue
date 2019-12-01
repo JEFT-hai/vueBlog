@@ -18,9 +18,10 @@
             <el-input class="password" :type="passwordRCSee ? '' : 'password'" clearable @keydown.native.enter="key($event, 'passwordRC')" v-model="formObj.passwordRC" placeholder='请再次输入密码'></el-input>
             <i @click='passwordRCSee=!passwordRCSee' :class="['iconfont', 'toggleSee-icon', {'iconinvisiblebukejian': !passwordRCSee}, {'iconvisiblekejian' : passwordRCSee}]"></i>
         </el-form-item>
-        <el-form-item prop="email" ref='email'>
+        <el-form-item prop="email" ref='email' :rules='rules.email'>
             <span class="iconItem"><i class="iconfont iconyouxiang"></i></span>
-            <el-input clearable @keydown.native.enter="key($event, 'email')" v-model="formObj.email" placeholder='请输入邮箱地址'></el-input>
+            <el-input clearable @keydown.native.enter="key($event, 'email')" v-model="formObj.email" placeholder='请输入邮箱地址'>
+            </el-input>
         </el-form-item>
         <el-form-item prop="nickname" ref='nickname'>
             <span class="iconItem"><i class="iconfont iconxin"></i></span>
@@ -81,7 +82,8 @@ export default {
                     {validator: validatePass2, trigger: 'blur'}
                 ],
                 email: [
-                    { required: true, message: '请输入邮箱地址', trigger: 'blur' }
+                    { required: true, message: '请输入邮箱地址', trigger: 'blur' },
+                    { type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }
                 ],
                 nickname: [
                     { required: true, message: '请输入昵称', trigger: 'blur' },
@@ -106,23 +108,26 @@ export default {
         },
         register () {
             let me = this
-            me.$.http({
-                method: 'post',
-                url: 'register',
-                data: me.formObj
-            }).then((res) => {
-                // eslint-disable-next-line
-                console.log(res)
-            }).catch((err) =>{
-                // eslint-disable-next-line
-                const errMsg = err.toString()
-                // eslint-disable-next-line
-                console.log(err.response)
-                // alert(JSON.stringify(err))
-                me.$router.push({
+            me.$router.push({
                     name: 'blogMain'
                 })
-            })
+            // me.$.http({
+            //     method: 'post',
+            //     url: 'register',
+            //     data: me.formObj
+            // }).then((res) => {
+            //     // eslint-disable-next-line
+            //     console.log(res)
+            // }).catch((err) =>{
+            //     // eslint-disable-next-line
+            //     const errMsg = err.toString()
+            //     // eslint-disable-next-line
+            //     console.log(err.response)
+            //     // alert(JSON.stringify(err))
+            //     me.$router.push({
+            //         name: 'blogMain'
+            //     })
+            // })
         }
     }
 }
@@ -165,7 +170,7 @@ export default {
                 line-height: 40px;
                 font-size: 16px;
                 top:0;
-                right: 40px;
+                right: -40px;
                 color: #fff;
             }
             .iconItem{
@@ -185,11 +190,6 @@ export default {
                 line-height: 44px;
                 margin-left: 44px;
                 width: auto;
-                &.password{
-                    .el-input__inner{
-                        padding-right: 80px;
-                    }
-                }
                 .el-input__inner{
                     background-color: transparent;
                     outline: none;

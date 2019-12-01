@@ -1,8 +1,8 @@
 <template>
     <div class='asideWrap'>
         <div class="aside-search">
-            <input type="text">
-            <i @click='toggleAside' :class="['iconfont', {'iconzhankai': !asideShow}, {'iconshouqi': asideShow}]"></i>
+            <el-input class="aside-input--search" placeholder="搜索..." v-model="searchTxt"><i slot="prefix" class="el-input__icon el-icon-search"></i></el-input>
+            <i @click='toggleAside' :class="['iconfont', 'toggleIcon', {'iconzhankai': !asideShow}, {'iconshouqi': asideShow}]"></i>
         </div>
         <el-menu background-color='#24252d'
                 text-color='#fff'
@@ -35,7 +35,8 @@ export default {
                 {title: '写博客1', link: {name: 'blogCreate'}, icon: 'el-icon-edit', submenu:[{title: '写博客1-1', link: {name: 'blogCreate'}}]},
                 {title: '写博客', link: {name: 'blogCreate'}, icon: 'el-icon-edit', submenu:[{title: '写博客1-1', link: {name: 'blogCreate'}}]},
                 {title: '写博客2', link: {name: 'blogCreate'}}
-            ]
+            ],
+            searchTxt: ''
         }
     },
     methods: {
@@ -55,7 +56,11 @@ export default {
 </script>
 <style lang="less">
     .asideWrap{
+        @media only screen and (max-width: 380px) {
+            width: 80%;
+        }
         position: fixed;
+        z-index: 100000;
         top: 0;
         left: 0;
         bottom: 0;
@@ -64,6 +69,33 @@ export default {
         text-align: left;
         overflow-x: hidden;
         overflow-y: auto;
+        .aside-search{
+            // position: relative;
+            height: 100px;
+            line-height: 100px;
+            padding: 0 40px;
+            background-color: #444;
+            .aside-input--search{
+                font-size: 24px;
+                color: #fff;
+                .el-input__inner{
+                    padding-left: 40px;
+                    color: #fff;
+                    border: none;
+                    background-color: transparent;
+                }
+            }
+            .toggleIcon{
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100px;
+                width: 60px;
+                color: #fff;
+                text-align: center;
+                font-size: 23px;
+            }
+        }
     }
     .el-menu-vertical-demo{
         width: 380px;
