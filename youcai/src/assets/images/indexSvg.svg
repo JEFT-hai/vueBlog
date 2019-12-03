@@ -1,0 +1,40 @@
+<svg width="750" height="1334" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect height="1336" width="752" y="-1" x="-1" fill="#fff" id="canvas_background"/>
+  <g y="0" x="0" height="100%" width="100%" display="none" overflow="visible" id="canvasGrid">
+   <rect height="100%" width="100%" y="0" x="0" stroke-width="0" fill="url(#gridpattern)"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect height="64" width="639" y="39" x="18" stroke-width="1.5" fill="#eeeeee" id="svg_1"/>
+  <rect height="82" width="104" y="148" x="27" stroke-width="1.5" fill="#eeeeee" id="svg_4"/>
+  <rect height="44" width="40" y="48" x="683" stroke-width="1.5" fill="#eeeeee" id="svg_9"/>
+  <rect height="48" width="486" y="323" x="108" stroke-width="1.5" stroke-opacity="null" stroke="null" fill-opacity="null" fill="#eeeeee" id="svg_11"/>
+  <rect height="395" width="304" y="427" x="53" stroke-width="1.5" stroke-opacity="null" stroke="null" fill-opacity="null" fill="#eeeeee" id="svg_16"/>
+  <ellipse ry="28.5" rx="29" cy="782.5" cx="97" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#fefefe" id="svg_21"/>
+  <rect height="25" width="103" y="244" x="27" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#f6f6f6" id="svg_25"/>
+  <line y2="313" x2="38" y1="103" x1="19" stroke-width="1.5" stroke-opacity="null" stroke-linejoin="null" stroke-linecap="null" stroke="null" fill="none" id="svg_32"/>
+  <polyline points="89,206 89,205" stroke-width="1.5" stroke-opacity="null" stroke-linecap="round" stroke="null" fill="none" id="svg_36"/>
+  <rect height="82" width="104" y="146" x="587" stroke-width="1.5" fill="#eeeeee" id="svg_37"/>
+  <rect height="82" width="104" y="148" x="406" stroke-width="1.5" fill="#eeeeee" id="svg_38"/>
+  <rect height="82" width="104" y="148" x="216" stroke-width="1.5" fill="#eeeeee" id="svg_39"/>
+  <rect height="25" width="103" y="248" x="589" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#f6f6f6" id="svg_40"/>
+  <rect height="25" width="103" y="248" x="413" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#f6f6f6" id="svg_41"/>
+  <rect height="25" width="103" y="248" x="219" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#f6f6f6" id="svg_42"/>
+  <rect height="395" width="304" y="888" x="407" stroke-width="1.5" stroke-opacity="null" stroke="null" fill-opacity="null" fill="#eeeeee" id="svg_43"/>
+  <rect height="395" width="304" y="891" x="54" stroke-width="1.5" stroke-opacity="null" stroke="null" fill-opacity="null" fill="#eeeeee" id="svg_44"/>
+  <rect height="395" width="304" y="427" x="404" stroke-width="1.5" stroke-opacity="null" stroke="null" fill-opacity="null" fill="#eeeeee" id="svg_45"/>
+  <rect height="28" width="110" y="769" x="158" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#fefefe" id="svg_46"/>
+  <ellipse ry="28.5" rx="29" cy="1240.5" cx="464" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#fefefe" id="svg_47"/>
+  <ellipse ry="28.5" rx="29" cy="1235.5" cx="107" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#fefefe" id="svg_48"/>
+  <ellipse ry="28.5" rx="29" cy="779.5" cx="458" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#fefefe" id="svg_49"/>
+  <rect height="28" width="110" y="1226" x="528" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#fefefe" id="svg_50"/>
+  <rect height="28" width="110" y="766" x="522" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#fefefe" id="svg_51"/>
+  <rect height="28" width="110" y="1222" x="162" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#fefefe" id="svg_52"/>
+  <rect height="25" width="24" y="333" x="696" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#fefefe" id="svg_53"/>
+  <rect height="33" width="31" y="329" x="689" stroke-width="1.5" stroke-opacity="null" stroke="null" fill="#eeeeee" id="svg_55"/>
+ </g>
+</svg>

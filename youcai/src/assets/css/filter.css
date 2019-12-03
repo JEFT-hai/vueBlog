@@ -1,0 +1,55 @@
+/*模糊效果*/
+.blur {
+  -webkit-filter: blur(0.7px);
+ filter: blur(0.7px);
+}
+/*调整图片亮度 0是黑色*/
+.light {
+ -webkit-filter: blur(126%);
+ filter: brightness(126%);
+}
+/*调整图片对比度  值越大越锐利，如果是0 就是黑色了*/
+.contrast {
+ -webkit-filter: brightness(130%);
+ filter: brightness(130%);
+}
+/*黑白效果 图片设置灰度 值越大越接近灰色*/
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/*设置颜色旋转,可以再加*/
+.hue-rotate {
+   -webkit-filter: hue-rotate(54deg); /* Chrome, Safari, Opera */
+   filter: hue-rotate(54deg);
+}
+.hue-rotate2 {
+-webkit-filter: hue-rotate(31deg); /* Chrome, Safari, Opera */
+filter: hue-rotate(31deg);
+}
+/*反转输入图像 可以设置为底片 胶片效果，再加 22*/
+.invert {
+ filter: invert(10%)
+}
+.invert2 {
+filter: invert(15%)
+}
+/*设置透明度*/
+.opacity {
+ -webkit-filter: opacity(79%); /* Chrome, Safari, Opera */
+ filter: opacity(79%);
+}
+/*设置图片饱和度 颜色鲜艳程度，再加*/
+.saturate {
+ -webkit-filter: saturate(183%); /* Chrome, Safari, Opera */
+ filter: saturate(183%);
+}
+.saturate2 {
+-webkit-filter: saturate(227%); /* Chrome, Safari, Opera */
+filter: saturate(227%);
+}
+/*褐色*/
+.sepa {
+ -webkit-filter: sepia(43%); /* Chrome, Safari, Opera */
+ filter: sepia(43%);
+}

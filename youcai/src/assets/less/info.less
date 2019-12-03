@@ -1,0 +1,85 @@
+﻿
+#app {
+  #user_info {
+      .links .link:before {
+          width: 4.444vw;
+      }
+
+      .page-content {
+          background-color: #f5f5f5;
+      }
+
+      #user_info_avatar img {
+          width: 10vw;
+          height: 10vw;
+          border-radius: 2vw;
+      }
+  }
+  #user_info_account_avatar_container {
+    margin-top: 15.467vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #user_info_account_avatar img {
+    width: 16vw;
+    height: 16vw;
+    border-radius: 8vw;
+  }
+  #user_info_account_nick {
+    color: #888;
+    margin-top: 4vw;
+  }
+  #user_info_account_qrcode_container {
+    border: 1px solid #b2b2b2;
+    margin-top: 21.333vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 58vw;
+    height: 58vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #user_info_account_qrcode {
+    width: 50.133vw;
+    height: 50.133vw;
+  }
+  
+  #user_info_addressList {
+    .links {
+      border-bottom: 1px solid #eaeaea;
+      &:after {
+        content: '';
+        display: block;
+        margin: 0 4.444vw;
+        height: 1px;
+        line-height: 1px;
+        background-color: #f4f4f4;
+        border-bottom: 1px solid #eaeaea;
+      }
+    }
+    .link {
+      margin: 4.444vw 0;
+      span {
+        line-height: 1.5;
+      }
+      .link_title > div:first-child {
+        font-size: 110%;
+      }
+      .user_info_address_name {
+        color: var(--main-color);
+      }
+      .user_info_address_isdefault {
+        color: var(--main-color);
+      }
+    }
+    .no_data {
+      margin-top: 40vh;
+      text-align: center;
+      font-size: 4.267vw;
+      color: #444;
+    }
+  }
+}

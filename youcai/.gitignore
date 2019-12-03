@@ -1,0 +1,15 @@
+node_modules
+/dist
+
+# SyncTrayzor
+.stfolder
+.stversions
+.stignore
+
+# Visual Studio
+.vs
+
+# Visual Studio Code
+.vscode
+
+.project

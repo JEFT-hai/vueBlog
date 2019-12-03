@@ -1,0 +1,197 @@
+.user_login {
+  padding: 0 7.466vw;
+  .user_login_header {
+    padding: 15vw 0 2.67vw;
+    > div {
+      display: flex;
+      justify-content: center;
+
+      img {
+        height: 19.2vw;
+        border-radius: 19.2vw;
+      }
+
+      &:last-child {
+        margin-top: 4vw;
+        font-size: 4.8vw;
+      }
+    }
+  }
+
+  .user_login_action_container {
+    .user_login_action {
+      display: flex;
+      justify-content: center;
+
+      > a {
+        padding: 0 2.4vw;
+        border-left: 1px solid #646464;
+        font-size: 4.266vw;
+        line-height: 100%;
+        color: #646464;
+
+        &:first-child {
+          border-left: none;
+        }
+      }
+    }
+  }
+
+  .user_login_type_container {
+    margin-top: 10.666vw;
+
+    h3 {
+      margin: 0;
+      text-align: center;
+      font-size: 3.2vw;
+      font-weight: 400;
+      color: #b0b0b0;
+
+      &:before,
+      &:after {
+        content: '';
+        display: inline-block;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        width: 28vw;
+        height: 1px;
+        background-color: #e0e0e0;
+        vertical-align: middle;
+      }
+    }
+
+    .user_login_type {
+      display: flex;
+      margin-top: 5.34vw;
+      justify-content: center;
+
+      > a {
+        width: 10vw;
+        height: 10vw;
+        margin: 0 2.67vw;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 15vw;
+
+        &:nth-child(1) {
+          background-color: #72c7db;
+        }
+
+        &:nth-child(2) {
+          background-color: #ed9090;
+        }
+
+        &:nth-child(3) {
+          background-color: #6bb6ea;
+        }
+
+        &:nth-child(4) {
+          background-color: #00be00;
+        }
+      }
+    }
+    .user_login_type .tianv--pngicon-weixin:before {
+      width: 23px;
+    }
+    .user_login_type .tianv--pngicon-alipay:before {
+      width: 24px;
+    }
+  }
+
+  .user_login_links {
+    margin-top: 18.666vw;
+    height: 21.333vw;
+
+    > div {
+      display: flex;
+      justify-content: center;
+
+      > a {
+        padding: 0 2.67vw;
+        border-left: 1px solid #ccc;
+        font-size: 3.74vw;
+        line-height: 150%;
+        color: #9b9b9b;
+
+        &:first-child {
+          border-left: none;
+        }
+      }
+    }
+  }
+}
+
+.user_login_type {
+  .iconWanwan {
+    // border:1px solid blue;
+    font-size: 6vw !important;
+  }
+  .tianv--pngicon:before {
+    background-image: url(../images/account_login_type.png);
+    background-size: initial;
+    width: 18px;
+    height: 18px;
+    margin: 6px;
+    content: '';
+    display: inline-block;
+  }
+  .tianv--pngicon {
+    &-qq:before {
+      background-position: -19px 0;
+    }
+    &-weibo:before {
+      background-position: -38px 0;
+    }
+    &-alipay:before {
+      background-position: -57px 0;
+    }
+    &-weixin:before {
+      background-position: -84px 0;
+    }
+  }
+}
+input[name='agree'] {
+  margin-right: 0.8vw;
+  // &:checked {
+  //   background-color: var(--main-color);
+  // }
+}
+// input[type='checkbox'] {
+//   position: relative;
+//   width: 5.55vw;
+//   height: 5.55vw;
+//   -webkit-appearance: none;
+//   outline: none;
+//   border: none;
+//   background-color: transparent;
+//   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+//   &:after {
+//     content: '';
+//     display: inline-block;
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     background-size: 100% 100%;
+//     background-position: 0% 0%;
+//     background-repeat: no-repeat;
+//     background-image: url(../images/input_checkbox.png);
+//   }
+//   &:checked:after {
+//     background-image: url(../images/input_checkbox_active.png);
+//   }
+// }
+a.link-agreement {
+  display: inline-block;
+  margin-left: 0.8vw;
+  margin-right: 0.8vw;
+}
+.input_container .input_panel_sms.is_loading {
+  opacity: 0.2;
+}
+.input_container .input_panel_sms.is_waiting {
+  opacity: 1 !important;
+  color: #666 !important;
+}
+.input_container .input_panel_code.is_loading {
+  opacity: 0.2;
+}

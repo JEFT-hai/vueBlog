@@ -1,0 +1,200 @@
+﻿
+/*
+    输入框
+*/
+.inputs {
+    .input_container {
+        display: flex;
+        position: relative;
+        border-bottom: 1px solid #d3d3d3;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        > .input_media {
+            /* 国家代码 */
+            .input_media_country {
+                display: block;
+                margin-right: 2.133vw;
+                padding: 2.666vw 2.666vw 2.666vw 0;
+                font-size: 4.8vw;
+                line-height: 5.333vw;
+                color: #9b9b9b;
+            }
+        }
+
+        > div.input {
+            flex: 1;
+            margin: 1px 0;
+
+            > input {
+                display: block;
+                padding: 4.266vw 0;
+                border: none;
+                width: 100%;
+                font-size: 4.8vw;
+                outline: none;
+            }
+        }
+
+        .input_panel {
+            /* 获取验证码 */
+            .input_panel_sms {
+                padding: 2.666vw 5.333vw;
+                font-size: 3.733vw;
+                line-height: 1.15;
+                color: #2ea5e5;
+                border:none;
+                outline: none;
+                &.is_disabled, &.weui-btn_loading {
+                    color: #999;
+                    cursor: default;
+                    /*font-size: 3.733vw;*/
+                }
+
+                &.weui-btn_loading {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+        /* 查看密码 */
+        .input_panel_pass {
+            padding: 0 5.333vw;
+            font-size: 6vw;
+            line-height: 1.5;
+            color: #000;
+            .icon {
+                font-size: inherit;
+            }
+        }
+
+        &.is_visible .input_panel_pass {
+            color: var(--main-color);
+            .icon:before {
+                content: "\e674";
+            }
+        }
+    }
+}
+
+.buttons {
+    margin-top: 6.4vw;
+    margin-bottom: 3.733vw;
+
+    .button_container {
+        margin-top: 6.4vw;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .button {
+            display: block;
+            padding: 2.666vw 0;
+            border: 1px solid #d3d3d3;
+            border-radius: 1.6vw;
+            width: 100%;
+            text-align: center;
+            font-size: 4.8vw;
+            color: #000;
+            overflow: hidden;
+            background-color: #fff;
+            outline: none;
+
+            &.button-fill {
+                color: #fff;
+            }
+
+            &.color-primary {
+                border-color: var(--main-color);
+                background-color: var(--main-color);
+            }
+        }
+    }
+}
+
+
+button.is_loading {
+    &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        border: 3px solid #ff6900;
+        border-top: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        animation: rotate360 2s linear infinite;
+        margin-left: -32px;
+        margin-top: 0px;
+    }
+
+    i {
+        display: none;
+    }
+}
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*.hashPage {
+    display: none;
+
+    &.is_show {
+        display: block;
+    }
+}*/
+
+/* 
+.user_login_action {
+	display: flex;
+	justify-content: center;
+
+	> a {
+		padding: 0 2.4vw;
+		border-left: 1px solid #646464;
+		font-size: 4.266vw;
+		line-height: 100%;
+		color: #646464;
+
+		&:first-child {
+			border-left: none;
+		}
+	}
+}
+ */
+ 
+input[type=checkbox] {
+  position: relative;
+  width: 5.55vw;
+  height: 5.55vw;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-position: 0% 0%;
+      background-repeat: no-repeat;
+      background-image: url(../images/input_checkbox.png);
+  }
+
+  &:checked:after {
+      background-image: url(../images/input_checkbox_active.png);
+  }
+}

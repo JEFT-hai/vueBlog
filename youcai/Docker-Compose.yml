@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+     duoluappweb:
+      container_name: duoluappweb
+      image: duoluappweb
+      build: 
+        context: .
+        dockerfile: ./Dockerfile
+      ports:
+        - 5211:80
+      volumes:
+        - data:/app/
+      #working_dir: /app
+      #environment:
+      #- NODE_ENV=production
+      #command: "npm run serve"
+
+volumes:
+  data:      

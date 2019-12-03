@@ -1,0 +1,158 @@
+{
+    "designs": [{
+        "id": 1,
+        "cover": "./assets/y/index/slider/banner1.jpg",
+        "tit": "创意壁灯推荐"
+    },{
+        "id": 2,
+        "cover": "@/assets/y/index/slider/banner1.jpg",
+        "tit": "装修案例"
+    },
+    {
+        "id": 3,
+        "cover": "@/assets/y/index/slider/banner1.jpg",
+        "tit": "创意壁灯推荐"
+    },{
+        "id": 4,
+        "cover": "@/assets/y/slider/banner2.jpg",
+        "tit": "很好的装修"
+    }],
+    "goods": {
+        "电器": [
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "手机"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "手表"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "电脑"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "电视"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "电风扇"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "电饭锅"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "电磁炉"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "电灯泡"
+            }
+        ],
+        "服装": [
+            {
+                "cover": "@/assets/y/slider/banner2.jpg",
+                "goodName": "T恤"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "裤子"
+            },
+            {
+                "cover": "@/assets/y/slider/banner2.jpg",
+                "goodName": "衬衫"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "大衣"
+            },
+            {
+                "cover": "@/assets/y/slider/banner2.jpg",
+                "goodName": "牛仔"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "卫衣"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "休闲"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "连衣裙"
+            }
+        ],
+        "宠物": [
+            {
+                "cover": "@/assets/y/slider/banner2.jpg",
+                "goodName": "猫"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "lucky"
+            },
+            {
+                "cover": "@/assets/y/slider/banner2.jpg",
+                "goodName": "衬衫"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "大衣"
+            },
+            {
+                "cover": "@/assets/y/slider/banner2.jpg",
+                "goodName": "牛仔"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "卫衣"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "休闲"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "连衣裙"
+            }
+        ],
+        "all": [
+            {
+                "cover": "@/assets/y/slider/banner2.jpg",
+                "goodName": "猫"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "lucky"
+            },
+            {
+                "cover": "@/assets/y/slider/banner2.jpg",
+                "goodName": "衬衫"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "大衣"
+            },
+            {
+                "cover": "@/assets/y/slider/banner2.jpg",
+                "goodName": "牛仔"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "卫衣"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "休闲"
+            },
+            {
+                "cover": "@/assets/y/index/slider/banner1.jpg",
+                "goodName": "连衣裙"
+            }
+        ]
+    }
+}

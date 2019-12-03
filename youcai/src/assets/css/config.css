@@ -1,0 +1,24 @@
+
+:root {
+    --main-color: #ff0000;
+    --navbar-height: 13.34vw;
+    --navbar-height-reverse: calc( -1 * var(--navbar-height) );
+    --tabbar-height: 12vw;
+    --tabbar-height-reverse: calc( -1 * var(--tabbar-height) );
+    --mRed: #ff2742;
+    --wRed: #be1113;
+    --dGray: #333;
+    --mGray: #474747;
+    --lGray: #999;
+    --mBg: #f5f5f5;
+    --mblue: #69baff;
+    --BTitle: 5.55vw;
+    --mTitle: 4.4vw;
+    --sTitle: 4vw;
+    --title: 4.44vw;
+    --mText: 3.7vw;
+    --nText: 3.5vw;
+    --sText: 3.2vw;
+    --noLikeXin:#474747;
+    --likeXin:red;
+}

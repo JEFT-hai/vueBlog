@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="referrer" content="never" />
+  <!-- <meta http-equiv="Cache-Control" content="max-age=604800‬" /> -->
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=true "> -->
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0,minimal-ui" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="format-detection" content="telephone=no,email=no,adress=no" />
+  <link rel="icon" href="<%=BASE_URL%>favicon.ico" />
+  <!-- <link rel="stylesheet" href="<%=BASE_URL%>assets/icon/iconfont.css" />
+  <link rel="stylesheet" href="<%=BASE_URL%>assets/icon/iconfont2.css" />
+  <link rel="stylesheet" href="<%=BASE_URL%>assets/icon/iconfont3.css" />
+  <link rel="stylesheet" href="<%=BASE_URL%>lib/weui/weui.min.css" /> -->
+  <!-- <link rel="stylesheet" href="<%=BASE_URL%>lib/swiper/swiper.min.css" /> -->
+  <!-- iconfont -->
+  <!-- <link rel="stylesheet" href="http://at.alicdn.com/t/font_1068519_i9vq18qr0j.css" /> -->
+  <!-- <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL" /> -->
+  <title>App</title>
+  <meta name="apple-mobile-web-app-title" content="应用程序标题" />
+  <meta name="Description" content="Put your description here." />
+  <link rel="dns-prefetch" href="//api.szwanwan.com" />
+  <link rel="dns-prefetch" href="//static.szwanwan.com" />
+  <link rel="preconnect" href="//api.szwanwan.com" />
+  <link rel="preconnect" href="//static.szwanwan.com" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1532431_52rhbe70ycy.css">
+</head>
+
+<body>
+  <noscript>We're sorry but shop_app doesn't work properly without JavaScript
+    enabled. Please enable it to continue.</noscript>
+  <div id="app"></div>
+  <div id="map" style="display:none">地图加载中...</div>
+  <script src="<%=BASE_URL%>lib/reconnecting-websocket.js"></script>
+  <script async src="<%=BASE_URL%>lib/area/citys.min.js"></script>
+  <!-- 城市的区 -->
+  <script async src="<%=BASE_URL%>lib/area/region.min.js"></script>
+  <!-- emoji -->
+  <!-- <script async src="<%=BASE_URL%>lib/emoji.js"></script> -->
+
+  <!-- axios -->
+  <script src="<%=BASE_URL%>lib/axios/axios.min.js"></script>
+
+  <script async src="<%=BASE_URL%>lib/weui.js/weui.min.js"></script>
+  <script async src="<%=BASE_URL%>lib/bscroll/bscroll.min.js"></script>
+  <script async src="<%=BASE_URL%>lib/swiper/swiper.min.js"></script>
+
+  <script async src="<%=BASE_URL%>lib/xss.min.js"></script>
+  <script async src="<%=BASE_URL%>assets/script/script.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
+  <script async src="https://api.map.baidu.com/getscript?v=2.0&ak=Gq7gTjpOaZIhkGs0l4MEOA1BkFsoATaP"></script>
+  <!-- <script src="https://browser.sentry-cdn.com/5.4.0/bundle.min.js" crossorigin="anonymous"> </script>
+  <script>
+    window.sentry = true
+    if (window.sentry) {
+      Sentry.init({
+        dsn: 'https://a0ad682923484e489c4fb8419a1e5269@log.szwanwan.com/3'
+      });
+    }
+  </script> -->
+
+  <script src="<%=BASE_URL%>lib/vConsole-3.3.4/dist/vconsole.min.js"></script>
+  <script>
+    // init vConsole
+    window.vconsole = false
+    if (window.vconsole) {
+      var vConsole = new VConsole()
+      console.log('Hello world')
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+  <!-- <script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script> -->
+  <!-- built files will be auto injected -->
+</body>
+
+</html>

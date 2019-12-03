@@ -1,0 +1,109 @@
+﻿#app {
+  .borderB {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: #e7e7e7;
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+      &:after {
+        transform: scaleY(0.7);
+      }
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio:2) {
+      &:after {
+        transform: scaleY(0.5);
+      }
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio:3) {
+      &:after {
+        transform: scaleY(0.34);
+      }
+    }
+  }
+
+  .borderT {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+      background-color: #e8e8e8;
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+      &:before {
+        transform: scaleY(0.7);
+      }
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio:2) {
+      &:before {
+        transform: scaleY(0.5);
+      }
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio:3) {
+      &:before {
+        transform: scaleY(0.34);
+      }
+    }
+  }
+
+  .textO {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  #user_settings {
+
+    #user_settings.hide_content {
+      .page-content {
+        visibility: hidden;
+
+        &:before {
+          content: '请先登录';
+          display: flex;
+          visibility: visible;
+          width: 100vw;
+          height: 100vw;
+          justify-content: center;
+          align-items: center;
+          color: #333;
+        }
+      }
+    }
+
+    #user_settings_tabbar>div {
+      background-color: #f4f4f4;
+
+      &>a {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+
+        &>span {
+          font-size: 4.17vw;
+          color: #3c3c3c;
+        }
+      }
+    }
+  }
+}
