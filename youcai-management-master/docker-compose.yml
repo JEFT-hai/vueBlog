@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  youcaiappweb:
+    container_name: youcaimanage
+    image: youcaimanage
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 7381:4200

@@ -1,0 +1,33 @@
+<nz-table #basicTable [nzData]="idAuthInfos">
+  <thead>
+    <tr>
+      <th>用户编号</th>
+      <!-- <th>idFront</th>
+      <th>idBack</th> -->
+      <th>身份证号</th>
+      <th>备注</th>
+      <!-- ：0 提交；1 审核通过；2 审核不通过 -->
+      <th>认证状态</th>
+      <th>创建时间</th>
+      <!-- <th>updateTime</th> -->
+      <th>操纵</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{ data.userId }}</td>
+      <!-- <td>{{ data.idFront }}</td>
+      <td>{{ data.idBack }}</td> -->
+      <td>{{ data.idCard }}</td>
+      <td>{{ data.remark }}</td>
+      <td>{{ data.idAuthState | authState }}</td>
+      <td>{{ data.createTime }}</td>
+      <!-- <td>{{ data.updateTime }}</td> -->
+      <td>
+        <!-- <a>Action 一 {{ data.userId }}</a>
+        <nz-divider nzType="vertical"></nz-divider> -->
+        <a routerLink="details/{{ data.userId }}">详情</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

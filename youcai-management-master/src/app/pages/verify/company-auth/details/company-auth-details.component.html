@@ -1,0 +1,19 @@
+<div *ngIf="enity">
+  <nz-descriptions nzTitle="提交审核信息">
+    <nz-descriptions-item nzTitle="用户编号" [nzSpan]="3"> {{ enity.userId }} </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="认证说明" nzSpan="3"> {{ enity.text }} </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="认证材料" nzSpan="3">
+      <img src="{{ enity.images }} " />
+    </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="备注" nzSpan="3">
+      <input nz-input [(ngModel)]="enity.remark" />
+    </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="当前审核状态"> {{ enity.authState | authState }} </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="创建时间"> {{ enity.createTime }}</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="更新时间" nzSpan="2"> {{ enity.updateTime }} </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="操作" nzSpan="3">
+      <button nz-button nzType="primary" (click)="saveOk(1)"><i nz-icon nzType="check"></i>审核通过</button>
+      <button nz-button nzType="danger" (click)="saveOk(2)">审核不通过</button>
+    </nz-descriptions-item>
+  </nz-descriptions>
+</div>

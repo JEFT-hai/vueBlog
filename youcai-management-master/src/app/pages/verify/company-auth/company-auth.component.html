@@ -1,0 +1,27 @@
+<nz-table #basicTable [nzData]="companyAuths">
+  <thead>
+    <tr>
+      <th>用户编号</th>
+      <th>认证说明</th>
+      <!-- ：0 提交；1 审核通过；2 审核不通过 -->
+      <th>认证状态</th>
+      <th>创建时间</th>
+      <!-- <th>updateTime</th> -->
+      <th>操纵</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{ data.userId }}</td>
+      <td>{{ data.text }}</td>
+      <td>{{ data.authState | authState }}</td>
+      <td>{{ data.createTime }}</td>
+      <!-- <td>{{ data.updateTime }}</td> -->
+      <td>
+        <!-- <a>Action 一 {{ data.userId }}</a>
+          <nz-divider nzType="vertical"></nz-divider> -->
+        <a routerLink="company-auth-details/{{ data.userId }}">详情</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

@@ -1,0 +1,22 @@
+<div *ngIf="idAuthInfo">
+  <nz-descriptions nzTitle="提交审核信息">
+    <nz-descriptions-item nzTitle="用户编号" [nzSpan]="3"> {{ idAuthInfo.userId }} </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="身份证正面" nzSpan="3">
+      <img src="{{ idAuthInfo.idFront }}" />
+    </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="身份证反面" nzSpan="3">
+      <img src="{{ idAuthInfo.idBack }} " />
+    </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="身份证编号"> {{ idAuthInfo.idCard }} </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="备注">
+      <input nz-input [(ngModel)]="idAuthInfo.remark" />
+    </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="当前审核状态"> {{ idAuthInfo.idAuthState | authState }} </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="创建时间"> {{ idAuthInfo.createTime }}</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="更新时间" nzSpan="2"> {{ idAuthInfo.updateTime }} </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="操作" nzSpan="3">
+      <button nz-button nzType="primary" (click)="saveOk(1)"><i nz-icon nzType="check"></i>审核通过</button>
+      <button nz-button nzType="danger" (click)="saveOk(2)">审核不通过</button>
+    </nz-descriptions-item>
+  </nz-descriptions>
+</div>
