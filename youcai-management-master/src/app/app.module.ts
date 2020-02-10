@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-02-03 15:59:05
+ * @LastEditTime : 2020-02-08 04:03:22
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \youcai-management-master\src\app\app.module.ts
+ */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 

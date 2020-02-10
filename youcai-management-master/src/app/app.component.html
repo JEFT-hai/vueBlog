@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-02-03 15:59:05
+ * @LastEditTime : 2020-02-08 02:07:00
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \youcai-management-master\src\app\app.component.html
+ -->
 <nz-layout class="app-layout">
   <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
     <div class="sidebar-logo">
@@ -27,6 +35,13 @@
           </li>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/verify/company-auth">企业认证</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="上传" nzIcon="file-add">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/post/good">上传商品</a>
           </li>
         </ul>
       </li>
