@@ -1,24 +1,40 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-08 00:11:13
- * @LastEditTime : 2020-02-10 01:58:47
+ * @LastEditTime : 2020-02-11 02:36:00
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \youcai-management-master\src\app\components\upload\upload.component.html
  -->
 <div class="upload-wrap">
-  <nz-upload
-    nzAction="http://file.szwanwan.com:7021/api/file"
-    nzListType="picture-card"
-    [(nzFileList)]="fileList"
-    [nzShowButton]="fileList.length < maxLength"
-    [nzShowUploadList]="showUploadList"
-    [nzPreview]="handlePreview"
-    [nzBeforeUpload]="beforeUpload"
-  >
-    <i nz-icon nzType="plus"></i>
-    <div class="ant-upload-text">Upload</div>
-  </nz-upload>
+  <div class="upload-list">
+    <div class="image-item image-cover--item"
+      *ngFor='let item of fileList;'
+      [ngStyle]='{width: 104*ratio + "px"}'
+    >
+      <img class="image-item--cover" [src]="item.cover" alt="">
+      <div class="image-item--mask">
+        <i class="icon previewIcon" nz-icon nzType="fullscreen" nzTheme="outline"
+          (click)='handlePreview(item)'
+        ></i>
+        <i class="icon closeIcon" nz-icon nzType="close-circle" nzTheme="outline"
+          (click)='handleDelete(item)'
+        ></i>
+      </div>
+    </div>
+    <div class="image-item image-add--item"
+      *ngIf='fileList.length < maxLength'
+      [ngStyle]='{width: 104*ratio + "px"}'
+    >
+      <input
+        class="image-input--upload"
+        type="file" accept="image/*"
+        (change)='fileChangeEvent($event)'
+      >
+      <i class="icon addIcon" nz-icon nzType="plus"></i>
+      <div class="ant-upload-text">上传</div>
+    </div>
+  </div>
   <nz-modal
       [(nzVisible)]="previewVisible"
       [nzContent]="modalContent"
@@ -29,4 +45,32 @@
       <img [src]="previewImage" [ngStyle]="{ width: '100%' }" />
     </ng-template>
   </nz-modal>
+  <div class="image-cropper--wrap"
+      [ngStyle]="{display: imageCropperShow ? 'block' : 'none'}"
+  >
+    <div class="image-cropper--bg" 
+      (click)="imageCropperShow = false"
+    ></div>
+    <div class="image-cropper--inner">
+      <image-cropper
+          [imageChangedEvent]="imageChangedEvent"
+          [maintainAspectRatio]="true"
+          [aspectRatio]="ratio"
+          [transform]="transform"
+          format="png"
+          (imageCropped)="imageCropped($event)"
+      ></image-cropper>
+      <div class="btn-list">
+        <nz-button-group>
+          <button nz-button nzType="default" (click)='zoomIn()'>缩小</button>
+          <button nz-button nzType="default" (click)='zoomOrigin()'>复原</button>
+          <button nz-button nzType="default" (click)='zoomOut()'>放大</button>
+        </nz-button-group>
+        <nz-button-group>
+          <button nz-button nzType="primary" (click)="imageCropperShow = false">取消</button>
+          <button nz-button nzType="primary" (click)="imageConfirm()">确定</button>
+        </nz-button-group>
+      </div>
+    </div>
+  </div>
 </div>
