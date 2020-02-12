@@ -1,13 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2020-02-11 22:12:27
- * @LastEditTime : 2020-02-12 03:17:37
+ * @LastEditTime : 2020-02-12 15:59:15
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \youcai-management-master\src\app\components\mobile-editor\mobile-editor.component.ts
  */
 import { Component, OnInit } from '@angular/core';
 import { FileService } from '../file.service'
+import { resolve } from 'url';
 
 @Component({
   selector: 'app-mobile-editor',
@@ -28,7 +29,7 @@ export class MobileEditorComponent implements OnInit {
   convert () {
     const html = document.getElementById('mobileEditor').innerHTML;
     // console.log(html, 'html')
-    // this.editorContent = html;
+    this.editorContent = html;
     let hasImporperImg = this.getImporperImg(html);
     hasImporperImg && this.filterImage()
   }
@@ -72,7 +73,7 @@ export class MobileEditorComponent implements OnInit {
     // base64 -> file
     let file = await this.base64ToFile(base64, filename);
     // file 请求压缩图片 替换网址
-    let newUrl = await this.fileS.thumbImg(file);
+    let newUrl = await this.getThumbImg(file);
     newUrl && (this.editorContent = this.editorContent.replace(url, newUrl))
     console.log(newUrl, url)
   }
@@ -108,6 +109,22 @@ export class MobileEditorComponent implements OnInit {
       }
       let file = new File([u8arr], filename, {type:mime})
       resolve(file)
+    })
+  }
+
+  // 获取图片url
+  getThumbImg (file) {
+    return new Promise((resolve) => {
+      this.fileS.thumbImg(file).subscribe(
+      val => {
+        console.log("Post call successful value returned in body", val);
+        resolve(val);
+      },
+      error => {
+        console.log("Post call in error", error);
+      })
+    }).catch((err) => {
+      console.log(err, 'thuImgErr')
     })
   }
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-02-12 02:06:09
- * @LastEditTime : 2020-02-12 03:36:17
+ * @LastEditTime : 2020-02-12 15:49:00
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \youcai-management-master\src\app\components\file.service.ts
@@ -38,10 +38,12 @@ export class FileService {
   thumbImg(file: any) {
     const fd = new FormData();
     fd.append('1', file);
-    return  this.http.post(this.fileUrl + 'FileThumbnailOnly', fd)
-                .toPromise()
-                .then((res) => {
-                    return res
-                })
+    return  this.http.post(this.fileUrl + 'FileThumbnailOnly', fd, {
+      responseType: "text"
+    })
+                // .toPromise()
+                // .then((res) => {
+                //     return res
+                // })
   }
 }
