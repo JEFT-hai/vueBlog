@@ -1,18 +1,91 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-08 00:43:13
- * @LastEditTime : 2020-02-11 02:46:08
+ * @LastEditTime : 2020-02-11 22:15:51
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \youcai-management-master\src\app\pages\post\good\good.component.html
  -->
 <div class="post-good--page">
-    <p class="upimages-tip">*请上传商品照片墙，宽高比为16：9，1-9张</p>
+    <p class="good-item--tit">
+        <i>*</i>请上传商品照片墙，宽高比为16：9，1-9张</p>
     <jeft-upload
-    #upload
-    [maxLength]='2'
-    [ratio]='16/9'
+        #upload
+        [maxLength]='2'
+        [ratio]='16/9'
     ></jeft-upload>
-    上面是上传照片墙
+    <p class="good-item--tit">
+        <i>*</i>
+        商品所属的大类：
+    </p>
+    <nz-radio-group [(ngModel)]="bigType">
+        <label nz-radio
+            *ngFor='let item of bigTypes;'
+            [nzValue]="item">{{item}}</label>
+    </nz-radio-group>
+    <form class="good-form" nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+        <!-- ng-form-item 用*ngFor循环不显示 -->
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="goodType">商品分类</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="商品分类能为空">
+                <input nz-input formControlName="goodType" id="goodType" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="goodBrand">商品品牌</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="商品品牌不能为空">
+                <input nz-input formControlName="goodBrand" id="goodBrand" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="goodName">商品名称</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="商品名称不能为空">
+                <input nz-input formControlName="goodName" id="goodName" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="goodDesc">商品详情</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="商品详情不能为空">
+                <input nz-input formControlName="goodDesc" id="goodDesc" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="goodPrice">商品价格</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="商品价格不能为空">
+                <input nz-input formControlName="goodPrice" id="goodPrice" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="oldPrice">商品原价</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="商品原价不能为空">
+                <input nz-input formControlName="oldPrice" id="oldPrice" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="goodSize">商品规格</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="商品规格不能为空">
+                <input nz-input formControlName="goodSize" id="goodSize" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="goodColor">商品颜色</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="商品颜色不能为空">
+                <input nz-input formControlName="goodColor" id="goodColor" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="goodUnit">商品单位</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="商品单位不能为空">
+                <input nz-input formControlName="goodUnit" id="goodUnit" />
+            </nz-form-control>
+        </nz-form-item>
+        <!-- <nz-form-item nz-row class="register-area">
+            <nz-form-control [nzSpan]="14" [nzOffset]="6">
+                <button nz-button nzType="primary">Register</button>
+            </nz-form-control>
+        </nz-form-item> -->
+    </form>
+    <app-mobile-editor></app-mobile-editor>
     <div class="getFiles" (click)='getFiles()'>getFiles</div>
 </div>
+

@@ -1,0 +1,17 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-02-11 22:12:27
+ * @LastEditTime : 2020-02-12 01:01:51
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \youcai-management-master\src\app\components\mobile-editor\mobile-editor.component.html
+ -->
+<div class="mobile-editor--wrapper">
+    <div class="mobile-editor--wrap">
+        <div id='mobileEditor' class="mobile-editor" contenteditable="true"></div>
+    </div>
+    <button class='convertBtn' nz-button nzType="default" (click)='convert()'>转换</button>
+    <div class="mobile-editor--wrap">
+        <div class="mobile-show" [innerHtml]='editorContent | html'></div>
+    </div>
+</div>
